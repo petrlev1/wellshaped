@@ -611,14 +611,14 @@ a.btn:hover,
 
             <div class="wrapper-featured-bottom">
             </div>          
-                <div style="margin-top: -90px; margin-left: 65px;"><b>Новости:</b><br><?php
+                <div style="margin-top: -90px; margin-left: 65px; width: 40%;"><b>Новости:</b><br><?php
 
 				$sql_q = "SELECT * FROM ".$main->pre."news WHERE publ!='1' ORDER BY id ASC LIMIT 0,2";
 				$sql_res = $main->q($sql_q);
 				while ($rows = mysql_fetch_array($sql_res))
 				{
 					echo "$rows[news_date] <a href=\"/pages.php?page=news&new=$rows[id]\" style='color: #000;'>$rows[news_title]</a>";
-					echo "<br>";
+					echo "<br><br>";
 				}
 
 
