@@ -96,7 +96,9 @@ $description = $rows["description"];
 	}
 	$big_desc = $rows["big_desc"];
 
-$page_name = mysql_result(mysql_query("SELECT pages_name FROM ".$main->pre."pages WHERE topics='$topics' AND pages=''"),"pages_name");
+	$rows33 = mysql_query("SELECT pages_name FROM ".$main->pre."pages WHERE topics='$topics' AND pages=''");
+
+$page_name = $rows33["pages_name"];
 }
 ?>
 <!DOCTYPE html>
@@ -590,6 +592,25 @@ else {
 					case "299":
 						include("gallery.php");
 					break;
+/*
+					case "84":
+
+						print "<h2>Виды массажа</h2>";
+
+						$sql_q = "SELECT * FROM ".$main->pre."pages WHERE topics='uvid5_massaja'";
+						$sql_res = $main->q($sql_q);
+
+						echo "<ul>";
+					
+						while ($rows = mysql_fetch_array($sql_res))
+					{
+							echo "<li><a href='/pages/".$main->firstlevel2($rows['id'])."id".$rows['id'].".htm' style='color: #000;'>".$rows["pages_name"]."</a>";
+					}
+
+					echo "</ul>";
+					
+					break;
+					*/
 
 		
 					case "feedback":
