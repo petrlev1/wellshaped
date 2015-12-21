@@ -129,6 +129,7 @@ $page_name = $sql_res33["pages_name"];
   <link rel="stylesheet" href="/index_files/style_003.css" type="text/css">
   <link rel="stylesheet" href="/index_files/ext.css" type="text/css">
   <link rel="stylesheet" href="/index_files/ext_002.css" type="text/css">
+  <link rel="stylesheet" href="/index_files/new.css" type="text/css">
   <script src="/index_files/atrk.js" async="" type="text/javascript"></script><script src="/index_files/analytics.js" async=""></script><script src="/index_files/jquery_005.js" type="text/javascript"></script>
   <script src="/index_files/jquery-noconflict.js" type="text/javascript"></script>
   <script src="/index_files/jquery-migrate.js" type="text/javascript"></script>
@@ -360,7 +361,7 @@ a.btn:hover,
     
 </head>
 
-<body class="com_virtuemart view-virtuemart task- itemid-101 body__home simple-title">
+<body class="com_virtuemart view-virtuemart task- itemid-101 body__home simple-title inback">
 <div class="wrapper">
 	     
 		<!-- HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->    
@@ -517,7 +518,7 @@ elseif (isset($_GET["page"]) && $_GET["page"]=="news")
 						   </div>
         
 		           
-           <div style="margin-left: 100px; margin-top: 30px;">
+           <div style="margin-left: 10%; margin-top: 30px; width: 70%;">
 		   
 		   
 		   
