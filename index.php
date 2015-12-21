@@ -593,8 +593,13 @@ a.btn:hover,
 </div></div>
 
 
-<p style="margin-left: 76px; width: 50%; line-height: 1.5;"><font color=white size=3><strong>Массаж</strong> приносит Вам больше добра, чем вы можете себе представить. Ведь при помощи массажа, будь то <strong>антицеллюлитный массаж</strong>, <strong>классический массаж</strong>, или <strong>массаж спины и шеи</strong>, ваше тело ускоряет регенерационные процессы. <strong>Массаж</strong> снимает боль в мышцах, иногда очень сильную. Так, тяжелые физические нагрузки ведут к появлению микротрещин в мышечных волокнах, далее начинается легкий воспалительный процесс. И тут организм начинает “чинить” самого себя. <strong>Спортиынй массаж</strong> ускоряет восстановительный процесс. Более того <strong>аромамассаж</strong>, <strong>баночный массаж</strong> или <strong>медовый массаж</strong> обладает общепризнанным и таким любимым расслабляющим и оздоровительным эффектом.</font></p>
+<!--
+<p style="margin-left: 76px; width: 600px; line-height: 1.5;"><font color=white size=3><b>Важный момент</b> - у нас не салон красоты. В Well-shaped мы не станем предлагать Вам ненужных услуг, чтобы повысить чек. <br>Здесь Вам сделают грамотный массаж с учетом Вашего индивидуального состояния организма по адекватной цене. 
+Угостим Вас чаем с восточными яствами- побалуйте себя.
+Мы работаем с органическими маслами и бальзамами, привезенными из Таиланда и Мальдивских островов- Navratna Oil, Aekprathom, Agrilife.
+Ждем Вас в Well-shaped.</font></p>
 <br><br><br>
+-->
 
 
                     </div>
@@ -606,14 +611,14 @@ a.btn:hover,
 
             <div class="wrapper-featured-bottom">
             </div>          
-                <div style="margin-top: -90px; margin-left: 65px; width: 40%;"><b>Новости:</b><br><?php
+                <div style="margin-top: -90px; margin-left: 65px;"><b>Новости:</b><br><?php
 
 				$sql_q = "SELECT * FROM ".$main->pre."news WHERE publ!='1' ORDER BY id ASC LIMIT 0,2";
 				$sql_res = $main->q($sql_q);
 				while ($rows = mysql_fetch_array($sql_res))
 				{
 					echo "$rows[news_date] <a href=\"/pages.php?page=news&new=$rows[id]\" style='color: #000;'>$rows[news_title]</a>";
-					echo "<br><br>";
+					echo "<br>";
 				}
 
 
