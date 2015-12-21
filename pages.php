@@ -96,9 +96,9 @@ $description = $rows["description"];
 	}
 	$big_desc = $rows["big_desc"];
 
-	$rows33 = mysql_query("SELECT pages_name FROM ".$main->pre."pages WHERE topics='$topics' AND pages=''");
+$sql_res33 = mysql_query("SELECT pages_name FROM ".$main->pre."pages WHERE topics='$topics' AND pages=''");
 
-$page_name = $rows33["pages_name"];
+$page_name = $sql_res33["pages_name"];
 }
 ?>
 <!DOCTYPE html>
@@ -129,7 +129,6 @@ $page_name = $rows33["pages_name"];
   <link rel="stylesheet" href="/index_files/style_003.css" type="text/css">
   <link rel="stylesheet" href="/index_files/ext.css" type="text/css">
   <link rel="stylesheet" href="/index_files/ext_002.css" type="text/css">
-  <link rel="stylesheet" href="/index_files/new.css" type="text/css">
   <script src="/index_files/atrk.js" async="" type="text/javascript"></script><script src="/index_files/analytics.js" async=""></script><script src="/index_files/jquery_005.js" type="text/javascript"></script>
   <script src="/index_files/jquery-noconflict.js" type="text/javascript"></script>
   <script src="/index_files/jquery-migrate.js" type="text/javascript"></script>
@@ -361,7 +360,7 @@ a.btn:hover,
     
 </head>
 
-<body class="com_virtuemart view-virtuemart task- itemid-101 body__home simple-title inback">
+<body class="com_virtuemart view-virtuemart task- itemid-101 body__home simple-title">
 <div class="wrapper">
 	     
 		<!-- HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->    
@@ -518,7 +517,7 @@ elseif (isset($_GET["page"]) && $_GET["page"]=="news")
 						   </div>
         
 		           
-           <div style="margin-left: 10%; margin-top: 30px; width: 70%;">
+           <div style="margin-left: 100px; margin-top: 30px;">
 		   
 		   
 		   
@@ -592,25 +591,6 @@ else {
 					case "299":
 						include("gallery.php");
 					break;
-/*
-					case "84":
-
-						print "<h2>Виды массажа</h2>";
-
-						$sql_q = "SELECT * FROM ".$main->pre."pages WHERE topics='uvid5_massaja'";
-						$sql_res = $main->q($sql_q);
-
-						echo "<ul>";
-					
-						while ($rows = mysql_fetch_array($sql_res))
-					{
-							echo "<li><a href='/pages/".$main->firstlevel2($rows['id'])."id".$rows['id'].".htm' style='color: #000;'>".$rows["pages_name"]."</a>";
-					}
-
-					echo "</ul>";
-					
-					break;
-					*/
 
 		
 					case "feedback":
